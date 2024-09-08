@@ -20,6 +20,10 @@ export default function List() {
     };
 
     const handleClick = () => {
+        if (Item === "") {
+            return;
+        }
+
         const newItem = {
             id: Math.random(),
             name: Item
