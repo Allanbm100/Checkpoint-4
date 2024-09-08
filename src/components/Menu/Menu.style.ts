@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const StyledMenu = styled.nav`
-    box-shadow: 0 -1px 0.5px rgba(200, 200, 200, 0.6);
+    box-shadow: 0 -1px 0.5px #C8C8C699;
     display: block;
     align-items: flex-end;
 `
