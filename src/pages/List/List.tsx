@@ -1,10 +1,9 @@
 import { useState } from "react";
 import { Button } from "../../components/Button/Button";
 import { Input } from "../../components/Input/Input";
-import { Items } from "../../components/Items/Items";
 import { Layout } from "../../components/Layout/Layout";
 import { StyledForm, StyledLabel } from "./List.style";
-import { StyledButton, StyledItem, StyledLine } from "../../components/Items/Items.style";
+import { StyledButton, StyledItem, StyledLine } from "./List.style";
 
 interface Item {
     id: number;
@@ -60,9 +59,6 @@ export default function List() {
                     </>
                 ))}
             </ul>
-
-
-            <Items></Items>
         </Layout>
     )
 } 
