@@ -6,9 +6,10 @@ interface InputProps {
     name: string;
     onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
     value: string | undefined;
+    placeholder: string;
   };
 
-export const Input = ({ type, id, name, onChange, ...rest }: InputProps) => {
+export const Input = ({ type, id, name, onChange, placeholder, ...rest }: InputProps) => {
     return (
         <>
             {/* <label htmlFor={id}>{label}</label> */}
@@ -17,6 +18,7 @@ export const Input = ({ type, id, name, onChange, ...rest }: InputProps) => {
                 id={id}
                 name={name}
                 onChange={(e) => onChange(e)}
+                placeholder={placeholder}
                 {...rest}
             />
         </>

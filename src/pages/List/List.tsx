@@ -3,7 +3,8 @@ import { Button } from "../../components/Button/Button";
 import { Input } from "../../components/Input/Input";
 import { Items } from "../../components/Items/Items";
 import { Layout } from "../../components/Layout/Layout";
-import { StyledForm } from "./List.style";
+import { StyledForm, StyledLabel } from "./List.style";
+import { StyledButton, StyledItem, StyledLine } from "../../components/Items/Items.style";
 
 interface Item {
     id: number;
@@ -31,23 +32,28 @@ export default function List() {
     return (
         <Layout>
             <h1>Nova Lista</h1>
+                <StyledLabel htmlFor="add">Adicionar Item</StyledLabel>
             <StyledForm>
-                <label htmlFor="add">Adicionar Item</label>
                 <Input
                     type="text"
                     id="add"
                     name="add"
                     onChange={handleChange}
                     value={Item}
+                    placeholder="Digite o item desejado"
                 />
                 <Button type="button" onClick={handleClick}></Button>
             </StyledForm>
 
             <ul>
                 {ListItem.length > 0 && ListItem.map((item) => (
-                    <li key={item.id}>
-                        {item.name}
-                    </li>
+                    <>
+                        <StyledItem key={item.id}>
+                            <StyledButton />
+                            <a>{item.name}</a>
+                        </StyledItem>
+                        <StyledLine />
+                    </>
                 ))}
             </ul>
 

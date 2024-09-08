@@ -15,6 +15,8 @@ export const StyledButton = styled.button`
 `;
 
 export const StyledLine = styled.div`
+    display: block;
+    width: 100%;
     height: 1px;
     box-shadow: 0 1px 0.5px #C8C8C699;
     margin-bottom: 20px;

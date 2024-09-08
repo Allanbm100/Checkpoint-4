@@ -4,8 +4,7 @@ export const Items = () => {
     return (
         <>
             <StyledItem>
-                <StyledButton></StyledButton>
-                <a>Abobrinha</a>
+                <StyledButton />
             </StyledItem>
             <StyledLine></StyledLine>
         </>
