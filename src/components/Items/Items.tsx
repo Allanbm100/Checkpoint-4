@@ -1,11 +1,11 @@
-import { StyledButton, StyledItem, StyledLine, StyledText } from "./Items.style"
+import { StyledButton, StyledItem, StyledLine } from "./Items.style"
 
 export const Items = () => {
     return (
         <>
             <StyledItem>
                 <StyledButton></StyledButton>
-                <StyledText>Abobrinha</StyledText>
+                <a>Abobrinha</a>
             </StyledItem>
             <StyledLine></StyledLine>
         </>

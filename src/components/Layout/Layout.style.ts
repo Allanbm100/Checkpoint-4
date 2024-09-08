@@ -1,7 +1,10 @@
 import { styled } from "styled-components";
 
 export const StyledTitle = styled.main`
-    color: #2676d1;
+    
+    & h1 {
+        color: #2676d1;
+    }
 `
 
 export const StyledLayout = styled.div`
