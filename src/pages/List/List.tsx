@@ -3,6 +3,7 @@ import { Button } from "../../components/Button/Button";
 import { Input } from "../../components/Input/Input";
 import { Items } from "../../components/Items/Items";
 import { Layout } from "../../components/Layout/Layout";
+import { StyledForm } from "./List.style";
 
 interface Item {
     id: number;
@@ -10,27 +11,27 @@ interface Item {
 }
 
 export default function List() {
-    const [Item, setItem] = useState<string>();
-    const [ListItem, setListItem] = useState();
-    const [HasAdded, setHasAdded] = useState<boolean>();
+    const [Item, setItem] = useState<string>("");
+    const [ListItem, setListItem] = useState<Item[]>([]);
 
     const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setItem(event.target.value);
     };
 
     const handleClick = () => {
-        setHasAdded(true);
+        const newItem = {
+            id: Math.random(),
+            name: Item
+        }
 
-    const instanceItem = {
-        id: Math.random(),
-        name: Item
-    }
+        setListItem([...ListItem, newItem]);
+        setItem("");
     };
 
     return (
         <Layout>
             <h1>Nova Lista</h1>
-            <form>
+            <StyledForm>
                 <label htmlFor="add">Adicionar Item</label>
                 <Input
                     type="text"
@@ -40,16 +41,15 @@ export default function List() {
                     value={Item}
                 />
                 <Button type="button" onClick={handleClick}></Button>
-            </form>
+            </StyledForm>
 
             <ul>
-                {
-                  ListItem.map((item) => (
-                    <li key={item.id}> {/* Esse 'key' serve pq precisamos definí-lo caso citemos um .map */}
-                      {item.nome}
+                {ListItem.length > 0 && ListItem.map((item) => (
+                    <li key={item.id}>
+                        {item.name}
                     </li>
-                  ))}
-              </ul>
+                ))}
+            </ul>
 
 
             <Items></Items>
