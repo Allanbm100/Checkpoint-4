@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 
 export const Menu = () => {
     return (
-        <>
         <StyledMenu>
             <StyledWrapperMenu>
                 <StyledMenuItem>
@@ -14,7 +13,7 @@ export const Menu = () => {
                 </StyledMenuItem>
                 <StyledMenuItem>
                     <AiOutlineFileAdd size="1.5rem" color="#2676d1" />
-                    <Link to="/list">Nova Lista</Link>
+                    <Link to="/lista">Nova Lista</Link>
                 </StyledMenuItem>
                 <StyledMenuItem>
                     <GoPerson size="1.5rem" color="#2676d1" />
@@ -22,6 +21,5 @@ export const Menu = () => {
                 </StyledMenuItem>
             </StyledWrapperMenu>
         </StyledMenu>
-        </>
     );
 };
